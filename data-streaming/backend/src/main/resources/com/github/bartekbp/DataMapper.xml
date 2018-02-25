@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.github.bartekbp.DataMapper">
+    <select id="selectAll" resultType="com.github.bartekbp.Data">
+        SELECT * FROM data.data LIMIT #{limit};
+    </select>
+
+    <select id="selectAllObs" resultType="com.github.bartekbp.Data">
+        SELECT * FROM data.data LIMIT #{limit};
+    </select>
+
+    <select id="countAll" resultType="java.lang.Integer">
+        SELECT count(*) from data.data;
+    </select>
+
+    <insert id="insert">
+        INSERT INTO data.data (
+            first_name,
+            last_name,
+            job,
+            phone_number,
+            email,
+            country
+        ) VALUES (
+              #{entity.firstName},
+              #{entity.lastName},
+              #{entity.job},
+              #{entity.phoneNumber},
+              #{entity.email},
+              #{entity.country}
+        )
+    </insert>
+</mapper>

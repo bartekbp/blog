@@ -1,0 +1,3 @@
+<configuration>
+    <logger name="io.gatling.http.action.async.sse.SseActor" level="info" />
+</configuration>

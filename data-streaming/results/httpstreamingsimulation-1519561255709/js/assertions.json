@@ -1,0 +1,10 @@
+{
+  "simulation": "com.github.bartekbp.HttpStreamingSimulation",
+  "simulationId": "httpstreamingsimulation",
+  "start": 1519561255709,
+  "description": "",
+  "scenarios": ["HttpStreamingSimulation"],
+  "assertions": [
+
+  ]
+}

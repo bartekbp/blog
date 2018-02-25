@@ -1,0 +1,21 @@
+
+plugins {
+    id 'com.github.lkishalmi.gatling' version '0.7.1'
+}
+
+apply plugin: 'scala'
+
+gatling {
+//    simulations = ['com.github.bartekbp.BasicHttpSimulation']
+//    simulations = ['com.github.bartekbp.ServerSentEventsSimulation']
+//    simulations = ['com.github.bartekbp.HttpStreamingSimulation']
+    jvmArgs = [ '-server', '-Xms2048M', '-Xmx2048M' ]
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile("org.scala-lang:scala-library:2.11.8")
+}

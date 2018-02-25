@@ -1,0 +1,10 @@
+{
+  "simulation": "com.github.bartekbp.BasicHttpSimulation",
+  "simulationId": "basichttpsimulation",
+  "start": 1519562614859,
+  "description": "",
+  "scenarios": ["BasicHttpSimulation"],
+  "assertions": [
+
+  ]
+}

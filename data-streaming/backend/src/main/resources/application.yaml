@@ -1,0 +1,14 @@
+server:
+  port: 8000
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/data-streaming
+    username: data-streaming
+    password: data-streaming
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    defaultFetchSize: 1000
+  mapper-locations: classpath:com/github/bartekbp/*.xml

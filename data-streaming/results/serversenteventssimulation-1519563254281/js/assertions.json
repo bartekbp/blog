@@ -1,0 +1,10 @@
+{
+  "simulation": "com.github.bartekbp.ServerSentEventsSimulation",
+  "simulationId": "serversenteventssimulation",
+  "start": 1519563254281,
+  "description": "",
+  "scenarios": ["ServerSentEventsSimulation"],
+  "assertions": [
+
+  ]
+}
