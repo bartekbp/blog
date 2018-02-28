@@ -1,9 +1,6 @@
 package com.github.bartekbp;
 
-import com.fasterxml.jackson.core.JsonFactory;
-import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.SequenceWriter;
 import io.jmnarloch.spring.boot.rxjava.async.ObservableSseEmitter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +37,9 @@ public class DataController {
 
     @GetMapping(value = "/dataObs", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public void readDataObs(@RequestParam("limit") Optional<Integer> limit, HttpServletResponse response) throws IOException {
-        SequenceWriter writer = objectMapper.writer().writeValuesAsArray(response.getOutputStream());
+        SequenceWriter writer = objectMapper.writer()
+                .writeValuesAsArray(response.getOutputStream());
+
         service.selectAllObs(limit.orElse(Integer.MAX_VALUE))
                 .forEach(writer::write);
         writer.close();

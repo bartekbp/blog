@@ -6,9 +6,14 @@ spring:
     url: jdbc:postgresql://localhost:5432/data-streaming
     username: data-streaming
     password: data-streaming
+  jackson:
+    serialization:
+      flush_after_write_value: false
 
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
     defaultFetchSize: 1000
   mapper-locations: classpath:com/github/bartekbp/*.xml
+
+
