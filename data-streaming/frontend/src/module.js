@@ -1,8 +1,15 @@
-import "@babel/polyfill";
 import angular from 'angular';
+import uiRouter from '@uirouter/angularjs';
 
-import app from './app';
+const module = angular
+  .module('data-streaming', [uiRouter])
+  .config($locationProvider => {
+    $locationProvider.html5Mode(true);
+  })
+  .config($compileProvider => {
+    if(process.env.NODE_ENV === 'production') {
+      $compileProvider.debugInfoEnabled(false);
+    }
+  });
 
-angular
-  .module('data-streaming', [])
-  .component('app', app);
+export default module;

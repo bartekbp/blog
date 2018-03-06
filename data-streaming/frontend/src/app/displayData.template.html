@@ -1,0 +1,7 @@
+<span ng-if="$ctrl.processedIn">
+  Processed data in {{$ctrl.processedIn}} ms
+</span>
+<br />
+<div ng-repeat="data in $ctrl.data track by $index">
+  {{$index}} {{::data | json}}
+</div>

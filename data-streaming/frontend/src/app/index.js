@@ -1,10 +1,18 @@
-import templateUrl from './index.html'
+import 'rxjs/add/operator/do';
 
-export default {
+import module from 'module';
+
+import './fetchHttp';
+import './fetchStreamingHttp';
+import './fetchServerSentEvents';
+
+import templateUrl from './index.html';
+import './index.scss';
+
+module.component('app', {
   templateUrl,
-  controller: class App {
-    constructor() {
-      console.log('works!')
-    }
-  }
-}
+  bindings: {
+    dataSize: '<',
+  },
+  controller: class {}
+});

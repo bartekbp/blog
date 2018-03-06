@@ -1,3 +1,11 @@
-<div>
-  Hello World!
-</div>
+<h3>
+  Fetching {{$ctrl.dataSize}} rows
+</h3>
+
+<ul>
+  <li><a ui-sref="fetching.http">Fetch using plain http</a></li>
+  <li><a ui-sref="fetching.streaming">Fetch using oboe.js streaming</a></li>
+  <li><a ui-sref="fetching.serverSentEvents">Fetch using Server Sent Events</a></li>
+</ul>
+
+<ui-view></ui-view>
