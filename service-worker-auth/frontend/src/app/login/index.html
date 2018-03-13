@@ -1,0 +1,16 @@
+<h3>
+  Login
+</h3>
+
+<h5>Existing user: Test</h5>
+
+<form novalidate name="$ctrl.form">
+  <input type="text" name="username" ng-model="$ctrl.username" required ng-change="$ctrl.error = null;"/>
+  <div ng-if="$ctrl.form.username.$error.required && ($ctrl.form.username.$dirty || $ctrl.form.$submitted)">
+    Login is required!
+  </div>
+  <div ng-if="$ctrl.error">
+    {{$ctrl.error }}
+  </div>
+  <button type="submit" ng-click="$ctrl.submit()">Login</button>
+</form>

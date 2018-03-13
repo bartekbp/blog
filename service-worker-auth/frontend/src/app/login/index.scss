@@ -1,0 +1,17 @@
+login {
+  $gutter: 5px;
+  & > * {
+    margin: $gutter 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: -$gutter 0;
+
+    & > * {
+      margin: $gutter 0;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "service-worker-auth",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/index.mjs"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "express-jwt": "5.3.1",
+    "express-jwt-permissions": "1.0.0",
+    "express-validator": "5.0.3",
+    "jsonwebtoken": "8.2.0",
+    "morgan": "~1.9.0"
+  }
+}
