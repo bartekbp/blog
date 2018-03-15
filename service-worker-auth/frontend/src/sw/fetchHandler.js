@@ -81,5 +81,11 @@ export default fetchEvent => {
     return;
   }
 
+  if(request.mode === 'navigate' && request.method === 'POST') {
+    console.log('Bypass sw on post navigation');
+    fetchEvent.respondWith(fetchEvent(request));
+    return;
+  }
+
   fetchEvent.respondWith(getResponse(request));
 };
